@@ -1,0 +1,9 @@
+@import "~baseCss/base/primy";
+.title{
+    font-size: .15rem;
+    height: .15rem;
+    line-height: .15rem;
+    border-left: 3px solid $primyColor;
+    margin: .1rem 0 0;
+    padding-left: .1rem;
+}

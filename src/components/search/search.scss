@@ -1,0 +1,44 @@
+@import '~baseCss/base/mixin';
+@import '~baseCss/base/primy';
+.searchWrap{
+    .headerWrap{
+        height: .5rem;
+        .headerNr{
+            height: .5rem;
+            background-color: $primyColor;
+            position: fixed;
+            left:50%;
+            transform: translateX(-50%);
+            top:0;
+            width: 100%;
+            max-width: 750px;
+            .searchInp{
+                background-color: #fff;
+                width: 2.7rem;
+                padding:0 .1rem;
+                border-radius: .2rem;
+                input{
+                    display: block;
+                    height: .15rem;
+                    line-height: .15rem;
+                    padding: .08rem 0;
+                    text-align: center;
+                    font-size: .12rem;
+                    &:focus{
+                            text-align: left;
+                    }
+                }
+            }
+            .close{
+                color: #fff;
+                font-size: .15rem;
+                margin-left: .1rem;
+                @include extend-click();
+            }
+        }
+        
+    }
+    .serchResult{
+        
+    }
+}
