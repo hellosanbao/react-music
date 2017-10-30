@@ -1,5 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
 import {bindActionCreators} from 'redux'
 import * as actions from 'store/action'
 
@@ -13,17 +14,27 @@ class AblumList extends React.Component{
     constructor(props){
         super(props)
     }
+    
     render(){
         return (
             <div className="ablumListBox">
-                <ListTitle title="推荐歌单"/>
-                <div className="list flex-list">
-                    <AblumItem/>
-                    <AblumItem/>
-                    <AblumItem/>
-                    <AblumItem/>
-                    <AblumItem/>
-                    <AblumItem/> 
+                <Link to='/gdlist'><ListTitle title="推荐歌单"/></Link>
+                <div className={`list flex-list ${this.props.lsatFull?"lastFull":""}`}>
+                    {this.props.datas.map((item,index)=>{
+                        switch (this.props.type){
+                            case 'song':
+                                return (<AblumItem datas={item} key={index}/>)
+                            break;
+                            case 'video':
+                                return (<VideoItem datas={item} key={index}/>)
+                            break;
+                            case 'fs':
+                                return (<VideoItem datas={item} key={index}/>)
+                            break;
+                            default:
+                                return;
+                        }
+                    })}
                 </div>
                 
             </div>

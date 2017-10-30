@@ -6,8 +6,11 @@ class ListTile extends React.Component{
     constructor(props){
         super(props)
     }
+    componentDidMount(){
+        
+    }
     render(){
-        return (<div className="title">{this.props.title}  ></div>)
+        return (<div className="homeTitle">{this.props.title}  <i className="iconfont icon-next"></i></div>)
     }
 }
 export default ListTile;

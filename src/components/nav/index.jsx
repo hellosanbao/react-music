@@ -9,29 +9,28 @@ class Product extends React.Component{
         super(props)
     }
     render(){
-        return (
-            <div className="bottomNavBox">
-                <div className="bottomNav flex-warp">
-                    <div className="item flex-con">
-                        <i className="icon-wangyiyunyinle iconfont"></i>
-                        <p>发现音乐</p>
+        return (<div className="fixedNav">
+               <div className="bottomNavBox">
+                    <div className="bottomNav flex-warp">
+                        <div className="item flex-con">
+                            <i className="icon-wangyiyunyinle iconfont"></i>
+                            <p>发现音乐</p>
+                        </div>
+                        <div className="item flex-con">
+                            <i className="icon-yinyue iconfont"></i>
+                            <p>我的音乐</p>
+                        </div>
+                        <div className="item flex-con active">
+                            <i className="icon-pengyou iconfont"></i>
+                            <p>朋友</p>
+                        </div>
+                        <div className="item flex-con">
+                            <i className="icon-user iconfont"></i>
+                            <p>账号</p>
+                        </div>
                     </div>
-                    <div className="item flex-con">
-                        <i className="icon-yinyue iconfont"></i>
-                        <p>我的音乐</p>
-                    </div>
-                    <div className="item flex-con active">
-                        <i className="icon-pengyou iconfont"></i>
-                        <p>朋友</p>
-                    </div>
-                    <div className="item flex-con">
-                        <i className="icon-user iconfont"></i>
-                        <p>账号</p>
-                    </div>
-                </div>
-            </div>
-            
-        )
+                </div> 
+            </div>)
     }
 }
 

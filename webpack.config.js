@@ -23,6 +23,7 @@ module.exports = {
       'node_modules':__dirname + '/node_modules',
       'swiper_css':__dirname+'/node_modules/swiper/dist/css',
       'baseCss':__dirname+'/src/static/css',
+      'static':__dirname+'/src/static',
       'pages':__dirname + '/src/pages'
     }
   },
@@ -49,6 +50,10 @@ module.exports = {
   },
   devServer: {
     // contentBase: "./dist",//本地服务器所加载的页面所在的目录
+    proxy: [{
+      context: ["/login", "/user","/top","/playlist","/music","/search","/lyric","/comment","/banner","/song","/program","/album","/artists","/simi","/recommend","/personal_fm","/daily_signin","/like","/fm_trash","/mv","/personalized","/dj"],
+      target: "http://localhost:3000",
+    }],
     historyApiFallback: true, //不跳转
     noInfo:true,
     host:'192.168.102.103',
@@ -58,7 +63,7 @@ module.exports = {
     hints: false
   },
   //开发模式时候source里面的资源导航
-  devtool: '#source-map'
+  devtool: '#source-map',
 }
 
 //生产模式打包的时候进行代码压缩合并优化

@@ -1,0 +1,24 @@
+@import "~baseCss/base/primy";
+@import "~baseCss/base/mixin";
+.tipsWarp{
+    @include border-1px();
+    padding-bottom: .2rem;
+    margin-top: .15rem;
+    .iconfont{
+        margin: 0 auto;
+        font-size: .3rem;
+        color:$primyColor;
+        display: block;
+        width: .5rem;
+        height:.5rem;
+        line-height:.5rem;
+        text-align: center;
+        border-radius: 50%;
+        border:1px solid $primyColor;
+    }
+    .title{
+        text-align: center;
+        font-size: .11rem;
+        margin-top: .05rem;
+    }
+}

@@ -1,1 +1,1 @@
-export const TEST = 'TEST'
+export const SEARCH_SLIDE = 'SEARCH_SLIDE'

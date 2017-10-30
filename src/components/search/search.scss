@@ -1,9 +1,11 @@
 @import '~baseCss/base/mixin';
 @import '~baseCss/base/primy';
 .searchWrap{
+    z-index: 10;
     .headerWrap{
         height: .5rem;
         .headerNr{
+            z-index: 300;
             height: .5rem;
             background-color: $primyColor;
             position: fixed;
@@ -25,7 +27,7 @@
                     text-align: center;
                     font-size: .12rem;
                     &:focus{
-                            text-align: left;
+                        text-align: left;
                     }
                 }
             }
@@ -39,6 +41,82 @@
         
     }
     .serchResult{
-        
+        display: none;
+        background:#fff;
+        position: fixed;
+        left:0;
+        right:0;
+        bottom:.45rem;
+        top:.5rem;
+        background-color: #fff;
+        z-index: 100;
+        .seachNavContent{
+            position: fixed!important;
+            left:0;
+            top:.5rem;
+            width:100%;
+            z-index: 110;
+            background-color: #fff;
+            @include border-1px();
+            .swiper-container1{
+                .swiper-slide{
+                    padding: 0 .2rem;
+                    font-size: .14rem;
+                    span{
+                        display: inline-block;
+                        height: .4rem;
+                        line-height: .4rem;
+                    }
+                    &.active{
+                        span{
+                            border-bottom: 2px solid $primyColor;
+                            color:$primyColor;
+                        }
+                    }
+                }
+            }
+        }
+        .searNr{
+            height:100%;
+            .swiper-container2{
+                .swiper-slide{
+                    height: 100%;
+                    overflow-y: scroll;
+                    -webkit-overflow-scrolling: touch;
+                }
+            }
+        }
     }
+    .searchIndex{
+        background:#fff;
+        position: fixed;
+        left:0;
+        right:0;
+        bottom:.45rem;
+        top:.5rem;
+        background-color: #fff;
+        z-index: 99;
+    }
+
 }
+
+.example-enter {
+    opacity: 0.01;
+    transform: translateY(-.2rem);
+  }
+  
+  .example-enter.example-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 300ms ease-in;
+  }
+  
+  .example-leave {
+    transform: translateY(0);
+  }
+  
+  .example-leave.example-leave-active {
+    opacity: 0.01;
+    transform: translateY(-.2rem);
+    transition: all 300ms ease-in;
+  }

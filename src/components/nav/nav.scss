@@ -1,23 +1,28 @@
-.bottomNavBox{
-    position: fixed;
-    left: 0;
-    bottom:0;
-    width: 100%;
-    .bottomNav{
-        max-width: 750px;
-        margin: 0 auto;
-        background-color: #000;
-        color: #b0b0b0;
-        padding: .02rem 0 .05rem;
-        .item{
-            &.active{
-                color: #fff;
-            }
-            font-size: .08rem;
-            text-align: center;
-            .iconfont{
-                font-size: .25rem;
+.fixedNav{
+    height:.5rem;
+    .bottomNavBox{
+        position: fixed;
+        left: 0;
+        bottom:0;
+        width: 100%;
+        z-index: 2000;
+        .bottomNav{
+            max-width: 750px;
+            margin: 0 auto;
+            background-color: #000;
+            color: #b0b0b0;
+            padding: .02rem 0 .05rem;
+            .item{
+                &.active{
+                    color: #fff;
+                }
+                font-size: .08rem;
+                text-align: center;
+                .iconfont{
+                    font-size: .25rem;
+                }
             }
         }
     }
 }
+

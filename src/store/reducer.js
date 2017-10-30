@@ -8,7 +8,7 @@ const initialState = {
 
 function testStore(state=initialState,action){
     switch(action.type){
-        case 'TEST' :
+        case 'SEARCH_SLIDE' :
             return {state,...action.data}
         default:
             return state

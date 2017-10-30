@@ -3,21 +3,15 @@ import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 import * as actions from 'store/action'
 
-import "./videoitem.scss"
+import './gdlist.scss'
 
-class Product extends React.Component{
+class GdList extends React.Component{
     constructor(props){
         super(props)
     }
     render(){
         return (
-            <div className="videoItem">
-                <div className="img"><img src={this.props.datas.image} alt=""/></div>
-                <div className="text">
-                    <p className="videoTitle ellipsis">{this.props.datas.title}</p>
-                    <p className="author ellipsis">{this.props.datas.author}</p>
-                </div>
-            </div>
+            <div className='gdlistWarp'>B组件{this.props.states.test}</div>
         )
     }
 }
@@ -37,4 +31,4 @@ function mapDispatchToProps (dispatch){
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(Product);
+)(GdList);

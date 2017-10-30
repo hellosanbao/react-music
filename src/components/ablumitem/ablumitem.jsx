@@ -13,9 +13,9 @@ class AblumItem extends React.Component{
         return (
             <div className="ablumItemBox">
                 <div className="img">
-                    <img src="" alt=""/>
+                    <img src={this.props.datas.image} alt=""/>
                 </div>
-                <div className="txt ellipsis-2">全球lol背景音乐集锦助你超神五杀游戏背景音乐</div>
+                <div className="txt ellipsis-2">{this.props.datas.title}</div>
             </div>
         )
     }

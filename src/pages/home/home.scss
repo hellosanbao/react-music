@@ -1,21 +1,4 @@
-.homePage{
-    background-color: #f6f6f6;
-    .listContent{
-        margin-top: .1rem;
-        margin-bottom: .1rem;
-        background-color: #fff;
-        .title{
-            text-align: center;
-            height: .25rem;
-            line-height: .25rem;
-            color: #333;
-            font-size: .14rem;
-            padding-top: .06rem;
-        }
-        .more{
-            color:#ad0e11;
-            font-size: .14rem;
-            text-align: center;
-        }
-    }
+.noScroll{
+    height: 100%;
+    overflow: hidden;
 }

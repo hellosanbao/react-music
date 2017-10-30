@@ -1,9 +1,9 @@
 import * as types from './type'
 
-//添加一个todo
-export function test (data){
+//搜素结果滑块
+export function searchSlide (data){
     return {
-        type:types.TEST,
+        type:types.SEARCH_SLIDE,
         data
     }
 }

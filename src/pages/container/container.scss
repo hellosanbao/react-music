@@ -1,0 +1,20 @@
+.examples-enter {
+    transform: translateX(-100%);
+    transition: all 100000ms ease-in;
+  }
+  
+  .examples-enter.examples-enter-active {
+    transform: translateX(0);
+  }
+  
+  .examples-leave {
+    transform: translateX(-100%);
+      transition: opacity 100000ms ease-in;
+  }
+  
+  .examples-leave.examples-leave-active {
+    transform: translateX(0);
+  }
+  .examples {
+    position: relative;
+}
